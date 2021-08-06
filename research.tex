@@ -6,12 +6,22 @@
 \addbibresource{sources.bib}
 
 \pagestyle{fancy}
+
 \fancyhf{}
 \fancyhead[R]{Bontera Research, \thepage}
-\fancyhead[L]{\leftmark }
+\fancyhead[L]{\leftmark}
 \fancyfoot[C]{Hayaan Rizvi}
 \setlength{\headheight}{15pt}
 \renewcommand{\footrulewidth}{0.4pt}
+
+\setcounter{tocdepth}{2}
+
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
 
 \begin{document}
 
@@ -127,7 +137,7 @@ The usual technique for controlling common scab has been seed treatment with pen
 
 \section{Corn (Maize)}
 
-\subsection{Dry rot}
+\subsection{Dry Rot}
 
 \subsubsection{Description}
 
@@ -165,7 +175,32 @@ The eastern United States experiences the worst effects of bacterial wilt in cor
 
 \subsubsection{Biosolution}
 
-Wicklow and Poling found in 2009 that \emph{Acremonium zeae} produces natural antibiotics that can protect corn against a number of pathogens that cause bacterial wilt, stalk rot, and leef blight in corn. It was, however, ineffective against \emph{E. stewartii} \autocite{wicklow2009antimicrobial}. Currently, the best control against Stewart's bacterial wilt is the cultivation of resistant hybrids (Golden Cross Bantam, Country Gentleman, Evergreen, etc.) and the use of insecticides to kill beatles that carry the disease \autocite{ullstrup1961corn}. Correct amounts of potassium minimize bacterial wilt, while high nitrogen predispose corn to infection \autocite{ullstrup1961corn}.
+Wicklow and Poling found in 2009 that \emph{Acremonium zeae} produces natural antibiotics that can protect corn against a number of pathogens that cause bacterial wilt, stalk rot, and leef blight in corn. It was, however, ineffective against \emph{E. stewartii} \autocite{wicklow2009antimicrobial}. Currently, the best control against Stewart's bacterial wilt is the cultivation of resistant hybrids (Golden Cross Bantam, Country Gentleman, Evergreen, etc.) and the use of insecticides to kill beetles that carry the disease \autocite{ullstrup1961corn}. Correct amounts of potassium minimize bacterial wilt, while high nitrogen predispose corn to infection \autocite{ullstrup1961corn}.
+
+
+\subsection{Northern Corn Leaf Blight (NCLB)}
+
+\subsubsection{Description}
+
+This leaf disease is a very devastating fungal illness \autocite{zhang2021klebsiella}. If it becomes well established a couple weeks following silking, crop yeild can be reduced by over 30\% \autocite{ullstrup1961corn}. Symptoms include long spots on leaves that spread until the entire plant (sans kernels) is taken over late in the growing season \autocite{ullstrup1961corn}. The symptoms resemble those of frost damage once northern corn leaf blight has progressed to a late stage.
+
+\subsubsection{Geography and Soil Type}
+
+NCBL is found in most moist environments where corn can be grown \autocite{ullstrup1961corn}. When conditions are perfect, such as in Florida, the disease can appear very early in the growing season and infect seedlings \autocite{ullstrup1961corn}. Ullstrup reports in his book, \emph{Corn Diseases in the United States and Their Control}, that ``germination and penetration take place within 6 to 18 hours when free water is present and the temperature is within 65° and 80°F.'' He found that it is prevalent in the eastern half of the United States, extending into the central area when conditions are favorable.
+
+\subsubsection{Cause}
+
+NCBL is caused by the heterothallic fungus \emph{Setosphaeria turcica} \autocite{leonard1989proposed}. It overwinters on corn leaves until its spores form on old lesions \autocite{ullstrup1961corn}. Then the wind can carry it a great distance during the summer. The races of \emph{S. turcica} are clasified based on their virulence against specific corn genes:
+
+\textbf{Race 0}: All \emph{Ht} genes are resistant to it
+
+\textbf{Race 1}: Can attack \emph{Ht1}
+
+\textbf{Race 23}: Can attack \emph{Ht23}
+
+\subsubsection{Biosolution}
+
+\emph{Klebsiella jilinsis} 2N3 is a bacterium that can degrade some hebicides, but also promotes corn growth and NCLB resistance \autocite{zhang2021klebsiella}. Treated plants showed a 67.44\% decrease in \emph{S. turcica} in pot experiments, as well as increased production of defence enzymes \autocite{zhang2021klebsiella}. Furthermore, Zhang et al. determined in 2021 that \emph{K. jilinsis} 2N3 can ``grow in a nitrogen-free environment, dissolve inorganic phosphorus and potassium, and produce indoleacetic acid and a siderophore.''
 
 \newpage
 
