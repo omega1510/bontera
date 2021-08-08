@@ -1,21 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%⠀⡠⡤⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀ ⠀%⠀⠀
+%⠀⠀⠀⢿⡢⣁⢄⢫⡲⢤⡀⠀⠀⠀⠀⢀⠄⠀⠀⠀⠀⠀⠀⠀⠀  ⠀%⠀⠀
+%⠀⠀⠀⠘⣧⡁⢔⢑⢄⠙⣬⠳⢄⠀⠀⣾⡀⠀⠀⠀⠀⠀⠀⠀    %⠀⠀⠀⠀⠀⠀
+%⠀⠀⠀⠀⠘⢎⣤⠑⣤⠛⢄⠝⠃⡙⢦⣸⣧⡀⠀⢠⠀⠀⠀⠀⠀⠀  %⠀⠀⠀⠀
+%⠀⠀⠀⠀⠀⠈⢧⡿⣀⠷⣁⠱⢎⠉⣦⡛⢿⣷⣤⣯⠀⠀⠀⠀⠀⠀  %⠀⠀⠀⠀
+%⠀⠀⠈⠉⠛⠻⢶⣵⣎⣢⡜⠣⣠⠛⢄⣜⣳⣿⣿⣿⡄⠀⠀⠀⠀   %⠀⠀⠀⠀⠀
+%⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣿⣾⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀  %⠀⠀⠀⠀
+%⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀  %⠀⠀⠀⠀
+%⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀  %⠀⠀⠀⠀
+%⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⠟⠛⠛⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀  %⠀⠀⠀⠀
+%⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠋⠀⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⠂⠀ %⠀⠀⠀
+%⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠿⠋⠁⠀ ⠀%
+%                                %
+%        Various Diseases        %
+%      of Commercial Crops       %
+%                                %
+%      Research for Bontera      %
+%        By Hayaan Rizvi         %
+%      Advised by Dr. Imam       %
+%      https://bontera.com       %
+%                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[12pt]{article}
 \usepackage{indentfirst}
+
+% fancyhdr settings
 \usepackage{fancyhdr}
-\usepackage[style=apa]{biblatex}
-
-\addbibresource{sources.bib}
-
-\pagestyle{fancy}
-
 \fancyhf{}
 \fancyhead[R]{Bontera Research, \thepage}
 \fancyhead[L]{\leftmark}
 \fancyfoot[C]{Hayaan Rizvi}
 \setlength{\headheight}{15pt}
 \renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
 
-\setcounter{tocdepth}{2}
+% define references file
+\usepackage[style=apa]{biblatex}
+\addbibresource{sources.bib}
 
+% remove number from section name
 \makeatletter
 \def\@seccntformat#1{%
   \expandafter\ifx\csname c@#1\endcsname\c@section\else
@@ -23,32 +47,45 @@
   \fi}
 \makeatother
 
+% only show sections and subsections in toc
+\setcounter{tocdepth}{2}
+
+
 \begin{document}
 
+% add title to toc
 \addcontentsline{toc}{section}{Title}
+
+% custom title
 \begin{center}
 	\Huge\textbf{Bontera Research}\\
-
+	
 	\Large{Hayaan Rizvi}\\
-
+	
 	\Large{Dr. Imam}\\
 	As of \today\\
 	\hfill \break
 	\noindent\rule{10cm}{0.4pt}
-
+	
 \end{center}
+\newpage
 
+% set indent to 0.5 inches
 \setlength{\parindent}{0.5in}
 
-\hfill \break
-\newpage
-
+% add Contents to toc
 \addcontentsline{toc}{section}{Contents}
-\tableofcontents
 
+% print toc
+\tableofcontents
 \newpage
+
+% start writing
 \section{Potatoes}
+
+
 \subsection{Soft Rot}
+
 \subsubsection{Description}
 
 Bacterial soft rot affects a number of fruits and vegetables, including potatoes. It is a post-harvest disease, occuring while the crop is stored or in transit \autocite{rich2013potato}. It is characterized by a watery soft spot on the side of the crop and an strong odor.
@@ -61,18 +98,21 @@ Soft rot arises worldwide, from South Africa \autocite{ngadze2012pectinolytic} t
 
 Two main genera cause soft rot: \emph{Pectobacterium} and \emph{Dickeya} \autocite{youdkes2020potential}. Bacterial growth is accelerated by any wound or puncture of the potato skin, especially a tender spot formed by standing water or insect bites breaking the outer layer \autocite{rich2013potato}.
 
-\subsubsection{Biosolution}
+\subsubsection{Biocontrol}
 
 Historically, farmers have used water-management and sanitation to control soft rot, but the bacterial predator \emph{Bdellovibrio bacteriovorus} and similar organisms have shown considerable promise as well, according to a recent study by Youdkes et al. (2020). All the strains tested were effective in reducing \emph{Pectobacterium} and \emph{Dickeya} greatly. Strains introduced in the tubers before the onset of soft rot were much more effective in fighting it later on, possibly because glucose consumption by the prey was not inhibiting growth \autocite{youdkes2020potential}. A second study also determined that a mixture of \emph{Pseudomonas putida} and \emph{Pseudomonas fluorescens} decreased the severity of the disease and prevented transmission to child potatoes.
 
 A third study found that certain varieties of rhizosphere bacteria could also be used to control soft rot caused by \emph{Pectobacterium} strains \autocite{krzyzanowska2012rhizosphere}. The results indicate that 18 various rhizobacteria were effective in inhibiting the spread of soft rot, out of the 1165 tested. The study noted, however, that the bacteria's ability to control \emph{Pectobacterium} \emph{in vitro} may not reflect the true results \emph{in vivo}.
 
+
 \subsection{Golden Nematode Disease}
+
 \subsubsection{Description}
 
 Nematodes are nearly invisible worms that attack potato plants and tubers \autocite{rich2013potato}. Rich also reports that some nematodes cause disease directly, while others act as vectors or catalysts for viral and fungal illnesses. Plants affected by golden nematode disease have necrotic and wilting leaves with stunted growth; many do not recover, resulting in severely reduced crop yeilds \autocite{rich2013potato}.
 
 \subsubsection{Geography and Soil Type}
+
 The golden nematode is native to Peru, but has spread all throughout the world \autocite{rich2013potato}. They can survive in any climate that potatoes can grow, but very strict quarantine and sanitation guidelines have prevented further spread \autocite{evans1980origin}.
 
 Mimee et al. (2015) found that optimal nematode egg hatching occurs when soil temperatures are between 59$^\circ F$ and 80$^\circ F$. The determined that increasing temperatures in cooler climates could lead to accelerated spread of golden nematode disease. Both dry weather and light soil favor the disease \autocite{rich2013potato}.
@@ -81,7 +121,7 @@ Mimee et al. (2015) found that optimal nematode egg hatching occurs when soil te
 
 The golden nematode (\emph{Globodera rostochiensis}) is the main cause of Golden Nematode Disease \autocite{rich2013potato}. The disease gets its name from the golden or brown cysts containing nematode eggs present after an infestation \autocite{rich2013potato}. This is how the the disease spreads: the cysts cling to containers, equipment, and tubers and are transferred between fields or farms.
 
-\subsubsection{Biosolution}
+\subsubsection{Biocontrol}
 
 Some farmers have reported the natural decline of nematode populations because of fungi parasitism \autocite{evans1993reviews}. 10 species were isolated from the soil, \emph{Cylindrocarpon destructans} being the most promising \autocite{evans1993reviews}. That same study found that ``when an inoculum of straw colonised by \emph{C. destructans} was placed around potato seed tubers planted in [nematode] infested soil ... the numbers of juvenile stages of \emph{G. rostochiensis} ... decreased by 62\%.''
 
@@ -89,9 +129,11 @@ Some farmers have reported the natural decline of nematode populations because o
 \subsection{Brown Rot}
 
 \subsubsection{Description}
+
 Brown rot, also known as bacterial wilt, is a very destructive bacterial disease \autocite{rich2013potato}. It was first reported it in the United States in 1896. Potatoes afflicted with brown rot excrete a ``slimy ooze'' at the base of the stem and eyes, although infected plants may also produce healthy tubers \autocite{rich2013potato}. In the early stages of the disease, the shoot system may wilt and the tubers will turn brown \autocite{kabeil2008potato}.
 
 \subsubsection{Geography and Soil Type}
+
 Brown rot heavily favors warmer climates; so much so that it is virtually eraticated in Canada and the northern United States \autocite{rich2013potato}. If it does infect potatoes in cooler climates, brown rot is harder to detect early on \autocite{kabeil2008potato}. The plants may not show any signs of infection until later stages of infection.
 
 In a study by van Elsat et al. (2000), a steady decline of brown rot was observed in loamy sand soil. They also found that severe drought drastically reduced brown rot infections across the board. The disease prefers moist, slightly acid, netral, and alkaline soil \autocite{rich2013potato}.
@@ -108,11 +150,12 @@ In a study by van Elsat et al. (2000), a steady decline of brown rot was observe
 
 \emph{P. solanacearum} usually enters a host through a wound on the skin or roots \autocite{rich2013potato}. Rich (2013) also reports that the aflicted crops may infect the soil, transfering brown rot to any new plants grown afterwards.
 
-\subsubsection{Biosolution}
+\subsubsection{Biocontrol}
 
 One effective way to combat brown rot is to add sulfur to sandy soil, followed by limestone in the summer \autocite{rich2013potato}. Furthermore, a number of potato variants are resistant to \emph{P. solanacearum}; planting these cultivars will help minimize losses \autocite{rich2013potato}.
 
 A study was also conducted by Fujiwara et al. in 2011 that experimented with using bacteriophages to control brown rot. While many of the viruses they tried were effective, application of {$\phi$}RSL1 (from family \emph{Myoviridae}) was the best method. Although it did not kill all the bacterial cells, it was successful in preventing the onset of disease. {$\phi$}RSL1 worked much better when it was introduced before \emph{P. solanacearum} as a preventative measure, although it did also have an effect when it was introduced after \autocite{fujiwara2011biocontrol}.
+
 
 \subsection{Common Scab}
 
@@ -130,12 +173,14 @@ below field capacity during early tuberization.'' \autocite{braun2017potato, arc
 
 The main cause of common scab in potatoes is various species of \emph{Streptomyces} \autocite{flores2008detection}. It is disputed whether \emph{Streptomyces} is a fungus or bacterium because it demonstrates characteristics of both (the USDA considers it a fungus) \autocite{rich2013potato}. The responsible strains synthesize thaxtomins and phytotoxins, chemicals required for the scabs to form \autocite{flores2008detection}. Flores-Gonz{\'a}lez et al. (2008) also report that the toxins exhibit properties similar to those of an infection.
 
-\subsubsection{Biosolution}
+\subsubsection{Biocontrol}
 
 The usual technique for controlling common scab has been seed treatment with pentachloronitrobenzene or maneb-zinc dust, but these show minimal effect on certain causal species \autocite{lee2004vivo}. Therefore, a more effective solution is needed for the control of common scab. Four \emph{Streptomycete} isolates, A020645, A010321, A010564, and A020973, showed antagonistic behavior against the common scab in a study by Lee et al. (2004). They lowered the formation of scabs and lesions by \textgreater 60\% and 55\%, respectively. Additionally, these four isolates were also resistant against 10 commonly used chemicals in potato fields, further improving their effectiveness.
 
 
+
 \section{Corn (Maize)}
+
 
 \subsection{Dry Rot}
 
@@ -151,7 +196,7 @@ Dry rot can occur at anywhere from 40° to 90°F, the best temperature being abo
 
 Scientists determined in 1834 that the primary cause of dry rot is the fungus \emph{Stenocarpella maydis} \autocite{durrell1923dry, ullstrup1961corn}. Mature spores are carried by the wind in warm, moist weather to healthy plants \autocite{ullstrup1961corn}. It enters into the ear through wounds in the husk, but may also infect the stalk and roots. Spores can lie dormant in soil for potentially several years while waiting for a host to infect \autocite{eddins1930dry}. \emph{S. maydis} infects the center of the ear first, only coming to the surface to release its spores \autocite{melhus1922dry}. Some hybrid species of corn have mild resistance, but no species is completely immune \autocite{ullstrup1961corn}.
 
-\subsubsection{Biosolution}
+\subsubsection{Biocontrol}
 
 Two \emph{Streptomyces} isolates, DAUFPE 11470 and DAUFPE 14632, were very effective in the control of \emph{S. maydis}; they reduced the pathogen in seedlings by 87.3\% and 85.6\%, respectively \autocite{bressan2005biological, bressan2003biological}. Seed germination was also increased by about 30\% when \emph{Streptomyces} was introduced in the same study.
 
@@ -173,7 +218,7 @@ The eastern United States experiences the worst effects of bacterial wilt in cor
 
 \emph{Erwinia stewartii} is the cause of Stewart's bacterial wilt in corn \autocite{ullstrup1961corn}. Ullstrup (1961) found that \emph{E. stewartii} is carried through the winter on the bodies of corn flea beetles: ``they feed on young corn plants and start infections on the leaves ... [and] spread the disease from infected to healthy plants.'' Streaks on the leaves of infected plants start from the beetle feeding on it, and then spread along the veins and up into the stalk \autocite{robert1967bacterial}. Lesions along the stalk of the corn plant can be covered with fungi, which is often mistaken to be the cause of the wilting and infection \autocite{ullstrup1961corn}.
 
-\subsubsection{Biosolution}
+\subsubsection{Biocontrol}
 
 Wicklow and Poling found in 2009 that \emph{Acremonium zeae} produces natural antibiotics that can protect corn against a number of pathogens that cause bacterial wilt, stalk rot, and leef blight in corn. It was, however, ineffective against \emph{E. stewartii} \autocite{wicklow2009antimicrobial}. Currently, the best control against Stewart's bacterial wilt is the cultivation of resistant hybrids (Golden Cross Bantam, Country Gentleman, Evergreen, etc.) and the use of insecticides to kill beetles that carry the disease \autocite{ullstrup1961corn}. Correct amounts of potassium minimize bacterial wilt, while high nitrogen predispose corn to infection \autocite{ullstrup1961corn}.
 
@@ -198,13 +243,38 @@ NCBL is caused by the heterothallic fungus \emph{Setosphaeria turcica} \autocite
 
 \textbf{Race 23}: Can attack \emph{Ht23}
 
-\subsubsection{Biosolution}
+\subsubsection{Biocontrol}
 
-\emph{Klebsiella jilinsis} 2N3 is a bacterium that can degrade some hebicides, but also promotes corn growth and NCLB resistance \autocite{zhang2021klebsiella}. Treated plants showed a 67.44\% decrease in \emph{S. turcica} in pot experiments, as well as increased production of defence enzymes \autocite{zhang2021klebsiella}. Furthermore, Zhang et al. determined in 2021 that \emph{K. jilinsis} 2N3 can ``grow in a nitrogen-free environment, dissolve inorganic phosphorus and potassium, and produce indoleacetic acid and a siderophore.''
+\emph{Klebsiella jilinsis} 2N3 is a bacterium that can degrade some hebicides, but also promotes corn growth and NCLB resistance \autocite{zhang2021klebsiella}. Treated plants showed a 67.44\% decrease in \emph{S. turcica} in pot experiments, as well as increased production of defence enzymes \autocite{zhang2021klebsiella}. Furthermore, Zhang et al. determined in 2021 that \emph{K. jilinsis} 2N3 can ``grow in a nitrogen-free environment, dissolve inorganic phosphorus and potassium, and produce indoleacetic acid and a siderophore,'' as well as prevent the onset of NCLB.
 
+
+\subsection{Yellow Leaf Blight}
+
+\subsubsection{Description}
+
+Yellow leaf blight was first detected in Wisconson in 1967 \autocite{comstock1973host}. It usually develops in large, local outbreaks \autocite{arny1971phyllosticta}. Infected plants develop spots of dead tissue on their leaves, surrounded by a yellowish-tan tint \autocite{ullstrup1961corn}. When the infection has progressed, brownish-black sacks of fungus spores form in the center of the lesions on older leaves, eventually breaking and oozing under wet weather \autocite{ullstrup1961corn}.
+
+\subsubsection{Geography and Soil Type}
+
+This illness is common in the northern portion of the corn belt \autocite{arny1971phyllosticta}. It is most severe in cool, wet weather, being a fungal disease \autocite{ullstrup1961corn}. 90-95\% of spores germinate withing 5 hours at 12, 15, or 18°C \autocite{castor1977controlled}. Insufficient tilling accelerates yellow leaf blight because the trash and debris from last season's crop my infect corn growing near it \autocite{ullstrup1961corn, castor1977controlled}.
+
+\subsubsection{Cause}
+
+\emph{Phyllosticta maydis} is the causal agent of yellow leaf blight \autocite{arny1971phyllosticta}. It cannot infect seeds, instead surviving in the post-harvest debris of previously infected plants \autocite{ullstrup1961corn}. Texas male-sterile corn is the most susceptible to this illness. In wet and windy weather, the pycnidia break and spread \emph{P. maydis} spores to the leaves of healthy plants \autocite{ullstrup1961corn}. Pycnidia are tiny, black pockets of spores that usually develop on older leaves, but may form on younger leaves in moist conditions \autocite{ullstrup1961corn}.
+
+\subsubsection{Biocontrol}
+
+The most effective solution for the control of yellow leaf blight is the use of resistant hybrids, as well as clean plowing and tilling to bury debris \autocite{ullstrup1961corn}. Furthermore, growth of \emph{P. maydis} can be reduced by using natural fungicides or crop rotation.
+
+
+\section{Soybean}
+
+\subsection{Charcoal rot}
+
+% new page for bibliography
 \newpage
 
-
+% print bibliography
 \addcontentsline{toc}{section}{References}
 \printbibliography
 
