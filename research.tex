@@ -25,11 +25,18 @@
 \documentclass[letterpaper, 12pt]{report}
 \usepackage{indentfirst}
 
+\renewcommand{\partname}{}
+\renewcommand{\chaptername}{}
+
 % fancyhdr settings
 \usepackage{fancyhdr}
-\fancyfoot[C]{Bontera Research, \thepage}
+\rhead{\rightmark}
+\lhead{\leftmark}
+\cfoot{Bontera Research, \thepage}
 \setlength{\headheight}{15pt}
 \renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{\rhead{}}
 \pagestyle{fancy}
 
 % define references file
@@ -59,6 +66,7 @@
 \end{center}
 \newpage
 
+
 % add Contents to toc
 \addcontentsline{toc}{chapter}{Contents}
 
@@ -69,7 +77,7 @@
 % start writing
 
 \chapter{Potatoes}
-\thispagestyle{fancy}
+
 
 \section{Soft Rot}
 
@@ -167,7 +175,7 @@ The usual technique for controlling common scab has been seed treatment with pen
 
 
 \chapter{Corn (Maize)}
-\thispagestyle{fancy}
+
 
 \section{Dry Rot}
 
@@ -255,7 +263,7 @@ The most effective solution for the control of yellow leaf blight is the use of 
 
 
 \chapter{Soybean}
-\thispagestyle{fancy}
+
 
 \section{Charcoal rot}
 
@@ -278,14 +286,8 @@ Khaledi and Taheri reported in 2016 that \emph{Trichoderma harzianum} isolates T
 \emph{Rhizobium japonicum} was also found to be a biocontrol agent against charcoal rot \autocite{al2012rhizobium}. It increased seed germination percentages and lowered the chance of infection in pot tests, as well as reducing the severity of infection when it did occur \autocite{al2012rhizobium}. Seeds should be coated in \emph{R. japonicum} before they are exposed to \emph{M. phaseolina} for the best protection \autocite{al2012rhizobium}.
 
 
-% new page for bibliography
-
-% \newpage
-
 % print bibliography
-
 \addcontentsline{toc}{chapter}{References}
-\thispagestyle{fancy}
 \printbibliography[title=References]
 
 \end{document}
